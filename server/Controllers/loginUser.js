@@ -10,7 +10,7 @@ exports.loginUser=async(req,res,next)=>{
         const user=await User.findOne({username});
 
         if(!user){
-            const error=new Error("User Not Founddd");
+            const error=new Error("User Not Found");
             error.statusCode=404;
             throw error;
         }
